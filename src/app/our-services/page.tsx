@@ -25,8 +25,8 @@ export default function ServicesPage() {
               <Bullets items={c.placements} />
             </Reveal>
             <PhotoPair
-              big="/images/lounge.jpg" altBig="Team meeting in an office lounge"
-              small="/images/agreement.jpg" altSmall="Agreement across a desk"
+              big="/images/services-team.jpg" altBig="Team working through a placement"
+              small="/images/engine.jpg" altSmall="Skilled trades and mechanical work"
             />
           </div>
 
@@ -59,7 +59,7 @@ export default function ServicesPage() {
 
           <div className={styles.benefit}>
             <Reveal className={styles.benefitLeft}>
-              <Image src="/images/team.jpg" alt="Savera Works team at work" width={460} height={300} className={styles.benefitPhoto} sizes="(max-width: 900px) 100vw, 460px" />
+              <Image src="/images/cost-savings.jpg" alt="Team reviewing a staffing plan" width={460} height={307} className={styles.benefitPhoto} sizes="(max-width: 900px) 100vw, 460px" />
               <h2 className="h2" style={{ fontSize: "clamp(24px, 2.4vw, 32px)" }}>{benefits.heading}</h2>
             </Reveal>
             <Reveal className={styles.benefitRight} delay={0.2}>

@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Contact Us", description: `${cta.hir
 export default function ContactPage() {
   return (
     <>
-      <Hero image="/images/hero-about.jpg" title={c.title} crumb={c.crumb} position="center 40%" />
+      <Hero image="/images/hero-home.jpg" title={c.title} crumb={c.crumb} position="center 40%" />
       <section className="section">
         <div className={`wrap ${styles.grid}`}>
           <Reveal className={styles.side}>

@@ -25,7 +25,7 @@ export default function AboutPage() {
               ))}
             </dl>
           </Reveal>
-          <RevealImage delay={0.22} src="/images/hero-services.jpg" alt="Colleagues working in an open-plan office" width={440} height={620} className={styles.portrait} sizes="(max-width: 900px) 100vw, 440px" />
+          <RevealImage delay={0.22} src="/images/about-feature.jpg" alt="At work in the office" width={440} height={294} className={styles.portrait} sizes="(max-width: 900px) 100vw, 440px" />
         </div>
       </section>
 
@@ -38,8 +38,8 @@ export default function AboutPage() {
               <p className="p">{c.p3b}<Flag>{c.p3Flag}</Flag></p>
             </Reveal>
             <PhotoPair
-              big="/images/team.jpg" altBig="Savera Works team at work"
-              small="/images/colleagues.jpg" altSmall="Colleagues reviewing work together"
+              big="/images/growth-analytics.jpg" altBig="Reviewing growth figures"
+              small="/images/growth-colleagues.jpg" altSmall="Colleagues over coffee"
             />
           </div>
           <dl className={styles.stats}>

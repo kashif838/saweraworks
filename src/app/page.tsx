@@ -48,8 +48,8 @@ export default function Home() {
             <Bullets items={sectors.items} />
           </Reveal>
           <PhotoPair
-            big="/images/team.jpg" altBig="Savera Works team at work"
-            small="/images/colleagues.jpg" altSmall="Colleagues reviewing work together"
+            big="/images/construction.jpg" altBig="Construction and infrastructure staffing"
+            small="/images/network.jpg" altSmall="IT and data support staffing"
           />
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function Home() {
             <Bullets items={benefits.items} />
           </Reveal>
           <PhotoPair
-            big="/images/agreement.jpg" altBig="Agreement across a desk"
+            big="/images/benefits-talk.jpg" altBig="Two colleagues in conversation"
             small="/images/desk.jpg" altSmall="Working at a desk in the office"
           />
         </div>

@@ -33,8 +33,8 @@ export function PhotoPair({
   const { group, item } = useStaggerProps(revealImage);
   return (
     <motion.div className={styles.pair} {...group}>
-      <MotionImage src={big} alt={altBig} width={440} height={380} className={styles.pairBig} style={{ objectPosition: posBig }} sizes="(max-width: 900px) 100vw, 440px" {...item} />
-      <MotionImage src={small} alt={altSmall} width={300} height={220} className={styles.pairSmall} style={{ objectPosition: posSmall }} sizes="(max-width: 900px) 62vw, 300px" {...item} />
+      <MotionImage src={big} alt={altBig} width={440} height={294} className={styles.pairBig} style={{ objectPosition: posBig }} sizes="(max-width: 900px) 100vw, 440px" {...item} />
+      <MotionImage src={small} alt={altSmall} width={300} height={200} className={styles.pairSmall} style={{ objectPosition: posSmall }} sizes="(max-width: 900px) 62vw, 300px" {...item} />
     </motion.div>
   );
 }
@@ -44,10 +44,10 @@ export function PhotoCollage({ portrait = "/images/lounge.jpg" }: { portrait?: s
   const { group, item } = useStaggerProps(revealImage);
   return (
     <motion.div className={styles.collage} {...group}>
-      <MotionImage src={portrait} alt="Team meeting in an office lounge" width={200} height={336} className={styles.cA} style={{ objectPosition: "center 15%" }} sizes="(max-width: 900px) 50vw, 200px" {...item} />
-      <MotionImage src="/images/interview.jpg" alt="Interview at a client office" width={344} height={160} className={styles.cB} sizes="(max-width: 900px) 50vw, 344px" {...item} />
-      <MotionImage src="/images/hero-services.jpg" alt="Placed staff in an open-plan office" width={344} height={336} className={styles.cC} sizes="(max-width: 900px) 50vw, 344px" {...item} />
-      <MotionImage src="/images/documents.jpg" alt="Reviewing candidate documents" width={200} height={160} className={styles.cD} sizes="(max-width: 900px) 50vw, 200px" {...item} />
+      <MotionImage src={portrait} alt="Team meeting in an office lounge" width={360} height={240} className={styles.cA} sizes="(max-width: 900px) 50vw, 360px" {...item} />
+      <MotionImage src="/images/colleagues.jpg" alt="Colleagues reviewing work together" width={360} height={240} className={styles.cB} sizes="(max-width: 900px) 50vw, 360px" {...item} />
+      <MotionImage src="/images/collage-meeting.jpg" alt="Team talking things through" width={360} height={240} className={styles.cC} sizes="(max-width: 900px) 50vw, 360px" {...item} />
+      <MotionImage src="/images/collage-blueprints.jpg" alt="Technical work on a laptop" width={360} height={240} className={styles.cD} sizes="(max-width: 900px) 50vw, 200px" {...item} />
     </motion.div>
   );
 }
@@ -99,7 +99,7 @@ export function CtaSplit() {
     <section className={`section ${styles.ctaSection}`}>
       <motion.div className={`wrap ${styles.ctaGrid}`} {...group}>
         <motion.div className={styles.ctaCard} {...item}>
-          <Image src="/images/hero-home.jpg" alt="" fill sizes="(max-width: 900px) 100vw, 50vw" className={styles.ctaBg} />
+          <Image src="/images/cta-hire.jpg" alt="" fill sizes="(max-width: 900px) 100vw, 50vw" className={styles.ctaBg} />
           <div className={styles.ctaScrim} />
           <div className={styles.ctaBody}>
             <h2 className={`h2 ${styles.ctaTitle}`}>{cta.hire.title}</h2>
@@ -111,7 +111,7 @@ export function CtaSplit() {
           </div>
         </motion.div>
         <motion.div className={styles.ctaCard} {...item}>
-          <Image src="/images/hero-resume.jpg" alt="" fill sizes="(max-width: 900px) 100vw, 50vw" className={styles.ctaBg} />
+          <Image src="/images/cta-candidate.jpg" alt="" fill sizes="(max-width: 900px) 100vw, 50vw" className={styles.ctaBg} />
           <div className={styles.ctaScrim} />
           <div className={styles.ctaBody}>
             <h2 className={`h2 ${styles.ctaTitle}`}>{cta.candidate.title}</h2>

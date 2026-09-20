@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import Flag from "@/components/Flag";
-import { Bullets, CtaSplit, PhoneLink, PhotoCollage, PhotoPair, StepCards } from "@/components/Blocks";
+import { Bullets, CompetencyCards, CtaSplit, PhoneLink, PhotoCollage, PhotoPair, StepCards } from "@/components/Blocks";
 import { about, benefits, hero, newCopyFlag, process, sectors, servicesPage as c } from "@/content/site";
-import Reveal, { RevealImage } from "@/components/Reveal";
+import Reveal from "@/components/Reveal";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = { title: "Our Services", description: hero.text };
@@ -32,7 +32,7 @@ export default function ServicesPage() {
 
           <Reveal className={styles.competencies}>
             <h2 className="h2">{c.competenciesHeading}</h2>
-            <Bullets items={c.competencies} cols={3} />
+            <CompetencyCards />
           </Reveal>
 
           <div className={styles.sectorsGrid}>
@@ -46,13 +46,10 @@ export default function ServicesPage() {
           </div>
 
           <div className={styles.steps}>
-            <div className={styles.stepsHead}>
-              <RevealImage src="/images/documents.jpg" alt="Reviewing candidate documents" width={480} height={380} className={styles.stepsPhoto} sizes="(max-width: 900px) 100vw, 480px" />
-              <Reveal className={styles.stepsCopy} delay={0.2}>
-                <h2 className="h2">{process.heading}</h2>
-                <p className="p">{process.sub}</p>
-              </Reveal>
-            </div>
+            <Reveal className={styles.stepsCopy}>
+              <h2 className="h2">{process.heading}</h2>
+              <p className="p">{process.sub}</p>
+            </Reveal>
             <StepCards />
             <Reveal className={styles.screening}>
               <h3 className="h3">{process.screeningHeading}</h3>

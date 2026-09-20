@@ -52,3 +52,36 @@ const social: Record<string, React.ReactNode> = {
 export const Social = ({ name, size = 17, ...r }: P & { name: string }) => (
   <svg {...base(size, r)} strokeWidth={1.8}>{social[name]}</svg>
 );
+
+/* ---------- competency icons ---------- */
+export const Clipboard = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><rect x="8" y="3" width="8" height="4" rx="1" /><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2" /><path d="M8 12h8M8 16h5" /></svg>
+);
+export const Headset = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><rect x="2" y="14" width="4" height="6" rx="1.5" /><rect x="18" y="14" width="4" height="6" rx="1.5" /><path d="M20 20v0a3 3 0 0 1-3 3h-3" /></svg>
+);
+export const Chart = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><path d="M4 20h16" /><path d="M7 20v-7M12 20V6M17 20v-4" /></svg>
+);
+export const Box = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z" /><path d="m3 8 9 5 9-5M12 13v8" /></svg>
+);
+export const Monitor = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><rect x="2" y="4" width="20" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg>
+);
+export const Wrench = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><path d="M15 3a5 5 0 0 0-4.6 7L3 17.4V21h3.6l7.4-7.4A5 5 0 1 0 15 3Z" /><path d="M17.5 6.5h.01" /></svg>
+);
+export const HardHat = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><path d="M4 16a8 8 0 0 1 16 0" /><path d="M9 16V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v9" /><rect x="2" y="16" width="20" height="4" rx="1.5" /></svg>
+);
+export const Flask = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><path d="M10 3v6.5L4.6 18A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.7-3L14 9.5V3" /><path d="M8.5 3h7M7.5 14h9" /></svg>
+);
+export const Database = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><ellipse cx="12" cy="5.5" rx="8" ry="3" /><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13" /><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></svg>
+);
+export const People = ({ size = 24, ...r }: P) => (
+  <svg {...base(size, r)}><circle cx="9" cy="8" r="3.2" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0" /><path d="M16.5 5.2a3.2 3.2 0 0 1 0 5.6M18 14.5a6.5 6.5 0 0 1 3.5 5.5" /></svg>
+);
+

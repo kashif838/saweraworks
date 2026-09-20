@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { contact, cta, process } from "@/content/site";
+import { contact, cta, process, servicesPage } from "@/content/site";
+import { Box, Chart, Clipboard, Database, Flask, HardHat, Headset, Monitor, People, Wrench } from "./Icons";
 import { motion } from "framer-motion";
 import { revealImage, revealStaggerList, revealUp, useStaggerProps } from "./Reveal";
 import styles from "./Blocks.module.css";
@@ -57,14 +58,38 @@ export function StepCards({ white = false }: { white?: boolean }) {
     <motion.ol className={styles.steps} {...group}>
       {process.steps.map((s) => (
         <motion.li key={s.n} className={`${styles.step} ${white ? styles.white : ""}`} {...item}>
-          <span className={`num ${styles.stepNum}`}>{s.n}</span>
-          <span className={styles.stepBody}>
-            <span className="h4">{s.title}</span>
-            <span className={styles.stepText}>{s.text}</span>
-          </span>
+          <Image src={s.img} alt={s.alt} width={400} height={225} className={styles.stepPhoto} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" />
+          <div className={styles.stepBody}>
+            <span className={`num ${styles.stepNum}`}>{s.n}</span>
+            <h3 className="h4">{s.title}</h3>
+            <p className={styles.stepText}>{s.text}</p>
+          </div>
         </motion.li>
       ))}
     </motion.ol>
+  );
+}
+
+const COMPETENCY_ICONS = {
+  clipboard: Clipboard, headset: Headset, chart: Chart, box: Box, monitor: Monitor,
+  wrench: Wrench, hardhat: HardHat, flask: Flask, database: Database, people: People,
+} as const;
+
+/** Four per row, each competency with its own mark. */
+export function CompetencyCards() {
+  const { group, item } = useStaggerProps();
+  return (
+    <motion.ul className={styles.comps} {...group}>
+      {servicesPage.competencies.map(({ label, icon }) => {
+        const Icon = COMPETENCY_ICONS[icon];
+        return (
+          <motion.li key={label} className={styles.comp} {...item}>
+            <span className={styles.compIcon}><Icon size={22} /></span>
+            <span className="h4">{label}</span>
+          </motion.li>
+        );
+      })}
+    </motion.ul>
   );
 }
 

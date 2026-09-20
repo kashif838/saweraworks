@@ -56,13 +56,10 @@ export default function Home() {
 
       <section className="section">
         <div className="wrap" style={{ display: "flex", flexDirection: "column", gap: 48 }}>
-          <div className={styles.howHead}>
-            <Reveal style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              <h2 className="h2">{process.heading}</h2>
-              <p className="p">{process.sub}</p>
-            </Reveal>
-            <RevealImage delay={0.2} src="/images/documents.jpg" alt="Reviewing candidate documents" width={440} height={300} className={styles.howPhoto} sizes="(max-width: 900px) 100vw, 440px" />
-          </div>
+          <Reveal className={styles.howHead}>
+            <h2 className="h2">{process.heading}</h2>
+            <p className="p">{process.sub}</p>
+          </Reveal>
           <StepCards />
           <Reveal className={styles.screening}>
             <h3 className="h3">{process.screeningHeading}</h3>

@@ -44,13 +44,15 @@ export default function ServicesPage() {
             <div className={styles.stepsHead}>
               <RevealImage src="/images/documents.jpg" alt="Reviewing candidate documents" width={480} height={380} className={styles.stepsPhoto} sizes="(max-width: 900px) 100vw, 480px" />
               <Reveal className={styles.stepsCopy} delay={0.2}>
-                <h2 className="h2">{process.heading}<Flag>{process.headingFlag}</Flag></h2>
+                <h2 className="h2">{process.heading}</h2>
                 <p className="p">{process.sub}</p>
-                <p className="p">{about.p3}<Flag>{about.p3Flag}</Flag></p>
-                <p className="p">{process.extra}<Flag>{newCopyFlag}</Flag></p>
               </Reveal>
             </div>
             <StepCards />
+            <Reveal className={styles.screening}>
+              <h3 className="h3">{process.screeningHeading}</h3>
+              <p className="p">{process.screeningText}</p>
+            </Reveal>
           </div>
 
           <div className={styles.benefit}>

@@ -58,14 +58,16 @@ export default function Home() {
         <div className="wrap" style={{ display: "flex", flexDirection: "column", gap: 48 }}>
           <div className={styles.howHead}>
             <Reveal style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              <h2 className="h2">{process.heading}<Flag>{process.headingFlag}</Flag></h2>
-              <p className="lead" style={{ color: "var(--text)" }}>{process.sub}</p>
-              <p className="p">{about.p3}<Flag>{about.p3Flag}</Flag></p>
-              <p className="p">{process.extra}<Flag>{newCopyFlag}</Flag></p>
+              <h2 className="h2">{process.heading}</h2>
+              <p className="p">{process.sub}</p>
             </Reveal>
             <RevealImage delay={0.2} src="/images/documents.jpg" alt="Reviewing candidate documents" width={440} height={300} className={styles.howPhoto} sizes="(max-width: 900px) 100vw, 440px" />
           </div>
           <StepCards />
+          <Reveal className={styles.screening}>
+            <h3 className="h3">{process.screeningHeading}</h3>
+            <p className="p">{process.screeningText}</p>
+          </Reveal>
         </div>
       </section>
 
@@ -79,7 +81,7 @@ export default function Home() {
           </Reveal>
           <PhotoPair
             big="/images/agreement.jpg" altBig="Agreement across a desk"
-            small="/images/lounge.jpg" altSmall="Team meeting in an office lounge"
+            small="/images/desk.jpg" altSmall="Working at a desk in the office"
           />
         </div>
       </section>

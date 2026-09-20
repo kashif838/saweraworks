@@ -9,6 +9,7 @@
 .splitText { display: flex; flex-direction: column; gap: 20px; max-width: 560px; }
 
 .howHead { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: clamp(28px, 6vw, 88px); align-items: center; }
+.screening { display: flex; flex-direction: column; gap: 14px; max-width: 900px; }
 .howPhoto { width: 440px; height: 300px; object-fit: cover; border-radius: var(--radius); }
 
 @media (max-width: 900px) {

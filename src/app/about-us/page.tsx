@@ -25,7 +25,7 @@ export default function AboutPage() {
               ))}
             </dl>
           </Reveal>
-          <RevealImage delay={0.22} src="/images/portrait.jpg" alt="Savera Works team member" width={440} height={620} className={styles.portrait} sizes="(max-width: 900px) 100vw, 440px" />
+          <RevealImage delay={0.22} src="/images/hero-services.jpg" alt="Colleagues working in an open-plan office" width={440} height={620} className={styles.portrait} sizes="(max-width: 900px) 100vw, 440px" />
         </div>
       </section>
 
@@ -55,7 +55,7 @@ export default function AboutPage() {
 
       <section className="section">
         <div className={`wrap ${styles.values}`}>
-          <PhotoCollage portrait="/images/desk.jpg" />
+          <PhotoCollage />
           <Reveal className={styles.valuesText} delay={0.2}>
             <h2 className="h2">{c.valueHeading}</h2>
             <p className="p">{c.valueText}</p>

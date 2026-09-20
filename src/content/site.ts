@@ -6,7 +6,7 @@ export const contact = {
   phoneDisplay: "703 508-2402",
   phoneHref: "tel:7035082402",
   email: "info@saveraworks.com",
-  location: "McLean, VA",
+  location: "8200 Greensboro Drive, McLean, VA 22102",
 };
 
 export const nav = [
@@ -18,7 +18,7 @@ export const nav = [
 ] as const;
 
 export const hero = {
-  title: "Your Partner in Precision Staffing",
+  title: "We take the stress out of your staffing needs",
   text: "Savera Works is your trusted partner in staffing excellence, offering specialized talent acquisition for Finance, Clerical, IT, Construction, Labor, and Engineering Support Services.",
 };
 
@@ -51,19 +51,24 @@ export const sectors = {
   items: ["Finance", "Clerical", "IT", "Construction", "Labor", "Engineering Support Services"],
 };
 
+// Recruiting and fulfillment method, supplied by the client. Verbatim.
 export const process = {
-  heading: "How it works",
-  headingFlag: "Content review required",
-  sub: "4 simple steps to your dedicated Outsourced staff",
-  // Restates the four step titles and the daily reporting step. See newCopyFlag.
-  extra: "The same four steps apply to every placement, from writing the job description through to day-to-day management, with structured daily reporting that keeps you informed of progress throughout.",
-  stepsFlag: "Template filler", // steps describe research and academic work
+  heading: "Recruiting and Fulfillment Method",
+  sub: "Savera Works uses a structured recruiting process designed for rapid municipal response without sacrificing candidate quality.",
   steps: [
-    { n: "01", title: "Job Description", text: "At Savera Works, we specialize in delivering innovative and reliable solutions across research, teaching support, and project development." },
-    { n: "02", title: "We Recruit", text: "We recruit passionate individuals with strong academic backgrounds and a commitment to excellence in research and education." },
-    { n: "03", title: "Daily Reporting", text: "We follow a structured daily reporting system to ensure transparency and progress tracking." },
-    { n: "04", title: "We Manage", text: "Savera Works effectively manages research projects, academic tasks, and professional services through strategic planning and organized execution." },
+    { n: "01", title: "Request intake and acknowledgment", text: "Target acknowledgment within 2–4 hours." },
+    { n: "02", title: "Requirements validation", text: "Confirm job duties, qualifications, schedule, location, duration, credentials, and screening requirements." },
+    { n: "03", title: "Candidate sourcing", text: "Search the internal database and pipeline, employee referrals, job boards, local recruiting channels, and targeted outreach." },
+    { n: "04", title: "Recruiter screening", text: "Verify hard skills, experience, availability, communication skills, and fit for the assignment." },
+    { n: "05", title: "Candidate presentation", text: "Target submission of qualified candidates within 6–8 hours for many classifications; labor and administrative candidates may be available for immediate start depending on the requirement." },
+    { n: "06", title: "Client interview and selection", text: "Coordinate telephone, virtual, or in-person interviews as requested." },
+    { n: "07", title: "Pre-employment vetting", text: "Complete required background, drug, driving-record, credential, education, employment, and other position-specific checks." },
+    { n: "08", title: "Onboarding and deployment", text: "Complete employment documentation, payroll setup, assignment orientation, and reporting instructions." },
+    { n: "09", title: "Ongoing management", text: "Confirm first-day start, maintain communication with the employee and hiring manager, and address performance or attendance issues promptly." },
+    { n: "10", title: "Replacement and continuity", text: "Rapidly source acceptable replacement personnel when an assignment ends unexpectedly or the City requests a change." },
   ],
+  screeningHeading: "Screening, Credentialing, and Compliance",
+  screeningText: "Savera Works maintains a position-specific screening process: criminal-history screening, Social Security trace/identity verification, sex-offender registry screening, employment and education verification, at least three professional reference checks for every candidate, and additional checks — driving records, credit history, drug testing, fingerprinting, polygraph examination, psychological evaluation, licenses, registrations, and certifications — when required by the position or client.",
 };
 
 export const benefits = {
@@ -134,7 +139,7 @@ export const servicesPage = {
 export const resumePage = {
   title: "Submit your Resume",
   crumb: "Submit Resume",
-  processHeading: "Here is how our registration process works",
+  processHeading: "How we fill a request",
   consent: "Confirm that the information provided is true and accurate.",
   privacyFlag: "Implementation requirement", // no privacy policy exists yet
 };

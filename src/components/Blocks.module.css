@@ -31,10 +31,14 @@
   .cA, .cB, .cC, .cD { grid-column: auto; grid-row: auto; }
 }
 
-/* ---------- step cards ---------- */
-.step { border-radius: var(--radius); background: var(--surface); padding: 32px; display: flex; flex-direction: column; gap: 14px; min-height: 300px; }
+/* ---------- numbered process steps ---------- */
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; counter-reset: none; }
+.step { border-radius: var(--radius); background: var(--surface); padding: 24px 26px; display: flex; gap: 16px; align-items: flex-start; }
 .step.white { background: var(--white); }
-@media (max-width: 900px) { .step { min-height: 0; padding: 24px; } }
+.stepNum { flex-shrink: 0; padding-top: 4px; min-width: 24px; }
+.stepBody { display: flex; flex-direction: column; gap: 6px; }
+.stepText { font-size: 15px; line-height: 1.5; color: var(--text); }
+@media (max-width: 900px) { .steps { grid-template-columns: 1fr; gap: 10px; } .step { padding: 20px 22px; gap: 14px; } }
 
 /* ---------- CTA split ---------- */
 /* The preceding section already supplies the bottom padding, so this one starts flush. */

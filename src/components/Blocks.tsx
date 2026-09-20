@@ -39,11 +39,11 @@ export function PhotoPair({
 }
 
 /** Four-photo grid used beside the Home About copy. */
-export function PhotoCollage({ portrait = "/images/portrait.jpg" }: { portrait?: string } = {}) {
+export function PhotoCollage({ portrait = "/images/lounge.jpg" }: { portrait?: string } = {}) {
   const { group, item } = useStaggerProps(revealImage);
   return (
     <motion.div className={styles.collage} {...group}>
-      <MotionImage src={portrait} alt="Savera Works team member" width={200} height={336} className={styles.cA} style={{ objectPosition: "center 15%" }} sizes="(max-width: 900px) 50vw, 200px" {...item} />
+      <MotionImage src={portrait} alt="Team meeting in an office lounge" width={200} height={336} className={styles.cA} style={{ objectPosition: "center 15%" }} sizes="(max-width: 900px) 50vw, 200px" {...item} />
       <MotionImage src="/images/interview.jpg" alt="Interview at a client office" width={344} height={160} className={styles.cB} sizes="(max-width: 900px) 50vw, 344px" {...item} />
       <MotionImage src="/images/hero-services.jpg" alt="Placed staff in an open-plan office" width={344} height={336} className={styles.cC} sizes="(max-width: 900px) 50vw, 344px" {...item} />
       <MotionImage src="/images/documents.jpg" alt="Reviewing candidate documents" width={200} height={160} className={styles.cD} sizes="(max-width: 900px) 50vw, 200px" {...item} />
@@ -54,15 +54,17 @@ export function PhotoCollage({ portrait = "/images/portrait.jpg" }: { portrait?:
 export function StepCards({ white = false }: { white?: boolean }) {
   const { group, item } = useStaggerProps();
   return (
-    <motion.div className="grid-4" {...group}>
+    <motion.ol className={styles.steps} {...group}>
       {process.steps.map((s) => (
-        <motion.div key={s.n} className={`${styles.step} ${white ? styles.white : ""}`} {...item}>
-          <div className="num">{s.n}</div>
-          <h3 className="h3" style={{ fontSize: 22 }}>{s.title}</h3>
-          <p className="p" style={{ fontSize: 15 }}>{s.text}</p>
-        </motion.div>
+        <motion.li key={s.n} className={`${styles.step} ${white ? styles.white : ""}`} {...item}>
+          <span className={`num ${styles.stepNum}`}>{s.n}</span>
+          <span className={styles.stepBody}>
+            <span className="h4">{s.title}</span>
+            <span className={styles.stepText}>{s.text}</span>
+          </span>
+        </motion.li>
       ))}
-    </motion.div>
+    </motion.ol>
   );
 }
 

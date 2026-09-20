@@ -11,6 +11,7 @@
 
 .stepsHead { display: grid; grid-template-columns: 480px minmax(0, 1fr); gap: clamp(24px, 6vw, 88px); align-items: center; }
 .stepsCopy { display: flex; flex-direction: column; gap: 16px; }
+.screening { display: flex; flex-direction: column; gap: 14px; max-width: 900px; }
 .stepsPhoto { width: 480px; height: 380px; object-fit: cover; border-radius: var(--radius); }
 
 .benefit { display: grid; grid-template-columns: 460px minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: start; }

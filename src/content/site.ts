@@ -159,6 +159,6 @@ export const footer = {
   socialNote: "Profile links not yet supplied",
   socialFlag: "Cleanup",
   social: ["Facebook", "Instagram", "Twitter", "LinkedIn", "YouTube"], // no URLs exist on the live site
-  copyright: "Copyright © 2024 Savera Works | Powered by",
+  copyright: "Copyright © 2026 Savera Works | Powered by",
   builder: { label: "Saabify", href: "https://www.saabify.com/" },
 };

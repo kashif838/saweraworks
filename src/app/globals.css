@@ -62,7 +62,7 @@ button { font: inherit; }
 
 /* ---------- layout ---------- */
 .wrap { width: 100%; max-width: calc(var(--wrap) + 40px); margin-inline: auto; padding-inline: 20px; }
-.section { padding-block: clamp(56px, 8vw, 112px); }
+.section { padding-block: clamp(40px, 5vw, 72px); }
 .section-surface { background: var(--surface); }
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 6vw, 88px); align-items: center; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }

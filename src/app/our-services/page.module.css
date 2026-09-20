@@ -1,5 +1,5 @@
 /* One white section; the stack gap carries the rhythm instead of alternating backgrounds. */
-.stack { display: flex; flex-direction: column; gap: clamp(56px, 7vw, 100px); }
+.stack { display: flex; flex-direction: column; gap: clamp(40px, 4.5vw, 72px); }
 .steps { display: flex; flex-direction: column; gap: clamp(32px, 4vw, 48px); }
 
 /* Copy beside an image, the same pairing the About and Home sections use. */

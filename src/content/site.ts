@@ -13,7 +13,8 @@ export const nav = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Our Services", href: "/our-services" },
-  { label: "Submit your Resume", href: "/submit-resume" },
+  { label: "Government", href: "/government" },
+  { label: "Submit Resume", href: "/submit-resume" },
   { label: "Contact us", href: "/contact-us" },
 ] as const;
 
@@ -173,6 +174,97 @@ export const servicesPage = {
   ],
 };
 
+// Government page. Every line below is taken from the Capability Statement PDF
+// (Capability_Statement.pdf in the project root). Nothing here is written for the site.
+export const governmentPage = {
+  title: "When you need staff, think Savera",
+  crumb: "Government",
+  lead: "Fast. Flexible. Fully managed workforce support.",
+  intro: "Savera Works fills critical workforce gaps quickly while handling recruiting, screening, onboarding, payroll, and employee administration for you. From one specialist to multiple shifts or project teams of up to 80 personnel, Savera provides one accountable team from recruitment through assignment completion.",
+  stats: [
+    ["24–48 hours", "Response on standard staffing requirements"],
+    ["80 personnel", "Scale of a single deployment"],
+    ["50 states", "Nationwide service area"],
+  ],
+
+  capabilitiesHeading: "Workforce capabilities",
+  capabilities: [
+    { icon: "clipboard", title: "Administrative and Professional",
+      roles: "Administrative assistants, program analysts, project coordinators, records, customer service, call-center personnel, and document control." },
+    { icon: "chart", title: "Finance, Acquisition and HR",
+      roles: "Accounting, billing, payroll, financial analysts, procurement/contract support, recruiting, HR operations, and training coordination." },
+    { icon: "monitor", title: "IT, Data and Technical",
+      roles: "Help desk, desktop/application support, QA testers, data/business analysts, reporting, engineering technicians, and technical writers." },
+    { icon: "hardhat", title: "Manufacturing and Skilled Operations",
+      roles: "Production, assembly, machine operators, mechanics, maintenance technicians, skilled trades, quality, and facilities support." },
+    { icon: "box", title: "Warehouse, Logistics and Supply",
+      roles: "Material handlers, forklift operators, inventory, shipping/receiving, production control, asset support, and logistics coordinators." },
+    { icon: "flask", title: "Laboratory, Field and Public Works",
+      roles: "Laboratory technicians, field support, general labor, public works, fleet/mechanical, sanitation, and operational personnel." },
+  ] as const,
+
+  experienceHeading: "Relevant delivery experience",
+  experience: [
+    { client: "Fairfax County",
+      text: "Multidisciplinary staffing for mechanics, engineers, laboratory technicians, IT, analysts, call-center, administrative, procurement, professional, and operational personnel; approximately 25–28 workers at one facility and 40–60 seasonal personnel." },
+    { client: "City of Alexandria",
+      text: "Incumbent workforce support for public works and labor-intensive operations, including recruiting, onboarding, payroll, timekeeping, invoicing, reporting, issue resolution, and account management." },
+  ] as const,
+
+  useHeading: "How organizations can use Savera",
+  use: [
+    "Temporary, contract, direct-hire, workforce augmentation, and payroll-only solutions.",
+    "One specialist through multi-shift or project deployments of up to 80 personnel.",
+    "Nationwide delivery with screening, onboarding, timekeeping, payroll, invoicing, reporting, and account management.",
+  ],
+  engagementHeading: "Core engagement options",
+  engagement: [
+    "Temporary and contract staffing.",
+    "Direct recruitment and placement.",
+    "Workforce augmentation and project teams.",
+    "Payroll and employer-of-record support.",
+    "Prime-contractor and subcontract staffing.",
+    "Surge, seasonal, vacancy, and backfill coverage.",
+  ],
+
+  deliveryHeading: "Delivery model",
+  delivery: "Standard staffing requirements are commonly filled within 24–48 hours, often sooner. Savera supports one specialist, a project team, multiple shifts, seasonal demand, or deployments of up to 80 personnel. One accountable team manages recruiting, screening, onboarding, worker communication, timekeeping, payroll, invoicing, reporting, and executive escalation.",
+
+  valueHeading: "Business value to clients",
+  value: [
+    "Fill standard staffing requirements within 24–48 hours, often sooner.",
+    "Scale from one specialist to project teams of up to 80 personnel.",
+    "Reduce internal recruiting, onboarding, payroll, and workforce-administration demands.",
+    "Provide one accountable point of contact for employees, reporting, and issue resolution.",
+    "Support vacancies, difficult shifts, seasonal demand, project surges, and urgent backfills.",
+    "Help prime contractors and corporate clients meet diverse-supplier participation goals.",
+  ],
+
+  dataHeading: "Company data",
+  data: [
+    ["Business type", "Small, Micro, Woman-Owned and Minority-Owned Staffing and Recruiting Firm"],
+    ["Headquarters", "McLean, Virginia"],
+    ["Service area", "Nationwide — all 50 states"],
+    ["Established", "June 2011"],
+    ["Certification", "Virginia SWaM Certified"],
+    ["CAGE", "7R3W6"],
+    ["UEI", "STDCL6N3NC68"],
+  ] as const,
+  naicsHeading: "NAICS codes",
+  naics: [
+    ["561320", "Temporary Help Services"],
+    ["561311", "Employment Placement Agencies"],
+    ["561210", "Facilities Support Services"],
+    ["561110", "Office Administrative Services"],
+    ["541611", "Administrative Management and General Management Consulting Services"],
+    ["541612", "Human Resources Consulting Services"],
+  ] as const,
+
+  contactHeading: "Government point of contact",
+  poc: { name: "Usma Khan", role: "CEO", email: "ukhan@saveraworks.com", phone: "(703) 593-0915", phoneHref: "tel:7035930915",
+         address: "8200 Greensboro Drive, Suite 900, McLean, VA 22102" },
+};
+
 export const resumePage = {
   title: "Submit your Resume",
   crumb: "Submit Resume",
@@ -190,6 +282,7 @@ export const footer = {
   useful: [
     { label: "About us", href: "/about-us" },
     { label: "Services", href: "/our-services" },
+    { label: "Government", href: "/government" },
     { label: "Contact us", href: "/contact-us" },
   ],
   services: [

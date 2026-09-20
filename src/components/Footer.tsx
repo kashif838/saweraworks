@@ -1,10 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { contact, footer } from "@/content/site";
 import { Mail, Phone, Social } from "./Icons";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const path = usePathname();
+  const link = (l: { label: string; href: string }) => (
+    <Link
+      key={l.label}
+      href={l.href}
+      className={path === l.href ? styles.active : undefined}
+      aria-current={path === l.href ? "page" : undefined}
+    >
+      {l.label}
+    </Link>
+  );
+
   return (
     <footer className={styles.foot}>
       <div className={`wrap ${styles.grid}`}>
@@ -18,13 +33,13 @@ export default function Footer() {
         </div>
         <div className={styles.col}>
           <div className={styles.head}>Company</div>
-          {footer.useful.map((l) => <Link key={l.label} href={l.href}>{l.label}</Link>)}
+          {footer.useful.map(link)}
         </div>
         <div className={styles.col}>
           <div className={styles.head}>Our Services</div>
-          {footer.services.map((l) => <Link key={l.label} href={l.href}>{l.label}</Link>)}
+          {footer.services.map(link)}
         </div>
-        <div className={styles.col}>
+        <div className={`${styles.col} ${styles.socialCol}`}>
           <div className={styles.head}>{footer.socialHeading}</div>
           {/* ponytail: no social URLs exist on the live site; wire hrefs when the client supplies them */}
           <div className={styles.social}>

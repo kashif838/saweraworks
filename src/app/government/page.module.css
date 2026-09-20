@@ -1,0 +1,65 @@
+.stack { display: flex; flex-direction: column; gap: clamp(40px, 4.5vw, 72px); }
+.block { display: flex; flex-direction: column; gap: 28px; }
+/* Section headings sit a step below the page h2 scale. */
+.h2Sm { font-size: clamp(24px, 2.4vw, 32px); }
+
+/* ---------- intro and headline figures ---------- */
+.intro { display: flex; flex-direction: column; gap: 28px; }
+.intro > p { max-width: 900px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
+.stat { display: flex; flex-direction: column; gap: 6px; padding: 26px 28px; border-radius: var(--radius); background: var(--surface); }
+.stat dd { margin: 0; }
+.statNum { font-size: clamp(26px, 2.8vw, 36px); font-weight: 600; color: var(--ink); letter-spacing: -0.025em; line-height: 1.1; }
+.statLabel { max-width: 24ch; }
+
+/* ---------- workforce capabilities ---------- */
+.capGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.cap { border-radius: var(--radius); background: var(--surface); padding: 28px 26px; display: flex; flex-direction: column; gap: 12px; }
+.capIcon {
+  width: 44px; height: 44px; border-radius: 13px; margin-bottom: 4px;
+  background: var(--white); color: var(--blue-text);
+  display: flex; align-items: center; justify-content: center;
+}
+.capRoles { font-size: 15px; line-height: 1.55; color: var(--text); margin: 0; }
+
+/* ---------- delivery experience ---------- */
+.expGrid { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: clamp(28px, 6vw, 72px); align-items: start; }
+.expList { display: flex; flex-direction: column; gap: 26px; max-width: 620px; }
+.exp { display: flex; flex-direction: column; gap: 8px; padding-left: 18px; border-left: 2px solid var(--blue); }
+.expPhoto { width: 440px; aspect-ratio: 3 / 2; height: auto; object-fit: cover; border-radius: var(--radius); }
+
+/* ---------- paired columns ---------- */
+.twoUp { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.col { display: flex; flex-direction: column; gap: 20px; }
+.delivery { display: flex; flex-direction: column; gap: 14px; max-width: 900px; }
+
+/* ---------- company data ---------- */
+.data { display: flex; flex-direction: column; gap: 14px; margin: 0; }
+.dataRow { display: grid; grid-template-columns: 148px minmax(0, 1fr); gap: 16px; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.dataRow dd { margin: 0; }
+.dataValue { font-size: 16px; line-height: 1.45; color: var(--ink); }
+.code { font-size: 15px; font-weight: 600; color: var(--blue-text); letter-spacing: 0.02em; }
+
+/* ---------- point of contact ---------- */
+.poc { padding: 40px 44px; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: clamp(24px, 4vw, 56px); align-items: center; }
+.pocText { display: flex; flex-direction: column; gap: 10px; }
+.pocName { font-size: 19px; font-weight: 600; color: var(--ink); margin: 0; }
+.pocRows { display: flex; flex-direction: column; gap: 12px; }
+.row { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: var(--ink); }
+.icon { color: var(--blue); flex-shrink: 0; }
+
+@media (max-width: 1000px) {
+  .capGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats { grid-template-columns: 1fr; gap: 10px; }
+}
+@media (max-width: 900px) {
+  .expGrid, .twoUp, .poc { grid-template-columns: 1fr; }
+  .expPhoto { width: 100%; }
+  .expList { max-width: none; }
+  .poc { padding: 26px 24px; }
+  .dataRow { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (max-width: 620px) {
+  .capGrid { grid-template-columns: 1fr; }
+  .cap { padding: 22px 22px; }
+}

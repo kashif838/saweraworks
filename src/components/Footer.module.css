@@ -6,16 +6,19 @@
 .brand img { height: 38px; width: auto; align-self: flex-start; }
 .col { display: flex; flex-direction: column; gap: 12px; font-size: 16px; }
 .head { font-weight: 600; color: #fff; font-size: 15px; }
+.col a.active { color: #fff; font-weight: 600; }
 .row { display: flex; gap: 10px; align-items: center; }
 .icon { color: var(--blue); flex-shrink: 0; }
 .note { font-size: 13px; line-height: 1.45; color: var(--foot-muted); }
-.social { display: flex; gap: 8px; }
+.social { display: flex; flex-wrap: wrap; gap: 8px; }
 .socialBtn { width: 40px; height: 40px; border-radius: 980px; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; }
 .bottom { border-top: 1px solid rgba(255, 255, 255, 0.12); margin-top: 52px; padding-top: 22px; font-size: 14px; color: var(--foot-muted); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .bottom a { color: var(--foot-tx); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 900px) {
   .foot { padding-top: 44px; }
   .grid { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+  .col { min-width: 0; }
   .brand { grid-column: 1 / -1; }
+  .socialCol { grid-column: 1 / -1; }
   .bottom { margin-top: 36px; flex-direction: column; }
 }

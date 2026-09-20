@@ -14,8 +14,8 @@
 .logo { display: flex; }
 .logo img { height: 40px; width: auto; }
 .nav { display: flex; gap: 32px; align-items: center; }
-/* Five items plus the button get tight just above the mobile breakpoint. */
-@media (max-width: 1100px) { .nav { gap: 20px; } }
+/* Six items plus the button get tight above the mobile breakpoint. */
+@media (max-width: 1180px) { .nav { gap: 18px; font-size: 14px; } }
 .nav a, .sheetNav a {
   color: rgba(255, 255, 255, 0.82);
   font-weight: 500; font-size: 15px; letter-spacing: -0.005em;
@@ -48,7 +48,7 @@
 .sheetNav { display: flex; flex-direction: column; }
 .sheetNav a { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; padding: 16px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .inner { height: 64px; }
   .logo img { height: 32px; }
   .nav { display: none; }

@@ -30,6 +30,11 @@ export default function ServicesPage() {
             />
           </div>
 
+          <Reveal className={styles.competencies}>
+            <h2 className="h2">{c.competenciesHeading}</h2>
+            <Bullets items={c.competencies} cols={3} />
+          </Reveal>
+
           <div className={styles.sectorsGrid}>
             <Reveal className={styles.sectorsText}>
               <h2 className="h2">{c.sectorsHeading}</h2>

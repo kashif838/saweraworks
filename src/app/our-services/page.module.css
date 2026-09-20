@@ -6,6 +6,7 @@
 .intro { display: grid; grid-template-columns: minmax(0, 1fr) 520px; gap: clamp(28px, 6vw, 88px); align-items: center; }
 .introText { display: flex; flex-direction: column; gap: 20px; max-width: 560px; }
 
+.competencies { display: flex; flex-direction: column; gap: 28px; }
 .sectorsGrid { display: grid; grid-template-columns: minmax(0, 1fr) 560px; gap: clamp(28px, 6vw, 88px); align-items: center; }
 .sectorsText { display: flex; flex-direction: column; gap: 20px; max-width: 560px; }
 

@@ -48,7 +48,19 @@ export const sectors = {
   // Restates: "First-hand staffing experience in all sectors of the market", "Professional
   // recruiting expertise", and the four placement types from the About paragraph.
   extra: "Each placement is handled by staffing professionals with first-hand experience in that sector. Whether you need pay-rolling, contract, direct hire placement or a cost-effective temp-to-hire option, the same recruiting expertise applies.",
-  items: ["Finance", "Clerical", "IT", "Construction", "Labor", "Engineering Support Services"],
+  // Industries and workforce supported, as supplied by the client.
+  items: [
+    "Utilities & Energy",
+    "Construction & Infrastructure",
+    "State & Local Government",
+    "Colleges & Universities",
+    "Public Works & Facilities",
+    "Engineering & Technical",
+    "Skilled Trades & General Labor",
+    "Administrative & Professional Support",
+    "IT & Data Support",
+    "Logistics & Warehouse Operations",
+  ],
 };
 
 // Recruiting and fulfillment method, supplied by the client. Verbatim.
@@ -132,8 +144,33 @@ export const servicesPage = {
   whatWeDo: "What we do",
   placements: ["Pay-rolling", "Contract", "Direct hire placement", "Temp-to-hire"],
   placementsFlag: "Client input", // named in copy, no descriptions exist
-  sectorsHeading: "Specialized talent acquisition for",
-  sectors: ["Finance", "Clerical", "IT", "Construction", "Labor", "Engineering Support Services"],
+  // Core competencies, as supplied by the client.
+  competenciesHeading: "Core competencies",
+  competencies: [
+    "Administrative & Clerical Support",
+    "Customer Service & Call Centers",
+    "Finance & Accounting",
+    "Logistics & Warehouse Operations",
+    "Information Technology (IT) & Technical Staffing",
+    "Facilities Support, Public Works & Sanitation",
+    "Skilled Trades, Mechanics & General Labor",
+    "Engineering & Laboratory Support",
+    "Data & Business Analysis",
+    "Temporary, Contract, Contract-to-Hire & Direct Hire",
+  ],
+  sectorsHeading: "Industries and workforce supported",
+  sectors: [
+    "Utilities & Energy",
+    "Construction & Infrastructure",
+    "State & Local Government",
+    "Colleges & Universities",
+    "Public Works & Facilities",
+    "Engineering & Technical",
+    "Skilled Trades & General Labor",
+    "Administrative & Professional Support",
+    "IT & Data Support",
+    "Logistics & Warehouse Operations",
+  ],
 };
 
 export const resumePage = {

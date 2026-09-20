@@ -1,0 +1,6 @@
+.grid { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: clamp(24px, 6vw, 88px); align-items: start; }
+.side { display: flex; flex-direction: column; gap: 24px; }
+.panel { padding: 32px; display: flex; flex-direction: column; gap: 16px; }
+.row { display: flex; gap: 10px; align-items: center; font-size: 16px; color: var(--ink); }
+.icon { color: var(--blue-text); }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .panel { padding: 24px; } }

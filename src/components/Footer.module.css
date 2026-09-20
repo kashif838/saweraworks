@@ -1,0 +1,21 @@
+.foot { background: var(--ink); color: var(--foot-tx); padding: 72px 0 calc(28px + env(safe-area-inset-bottom, 0px)); }
+.foot a { color: var(--foot-tx); }
+@media (hover: hover) and (pointer: fine) { .foot a:hover { color: #fff; } }
+.grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.3fr; gap: 48px; }
+.brand { display: flex; flex-direction: column; gap: 24px; }
+.brand img { height: 38px; width: auto; align-self: flex-start; }
+.col { display: flex; flex-direction: column; gap: 12px; font-size: 16px; }
+.head { font-weight: 600; color: #fff; font-size: 15px; }
+.row { display: flex; gap: 10px; align-items: center; }
+.icon { color: var(--blue); flex-shrink: 0; }
+.note { font-size: 13px; line-height: 1.45; color: var(--foot-muted); }
+.social { display: flex; gap: 8px; }
+.socialBtn { width: 40px; height: 40px; border-radius: 980px; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; }
+.bottom { border-top: 1px solid rgba(255, 255, 255, 0.12); margin-top: 52px; padding-top: 22px; font-size: 14px; color: var(--foot-muted); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.bottom a { color: var(--foot-tx); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) {
+  .foot { padding-top: 44px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+  .brand { grid-column: 1 / -1; }
+  .bottom { margin-top: 36px; flex-direction: column; }
+}

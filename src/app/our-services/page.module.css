@@ -1,0 +1,27 @@
+/* One white section; the stack gap carries the rhythm instead of alternating backgrounds. */
+.stack { display: flex; flex-direction: column; gap: clamp(56px, 7vw, 100px); }
+.steps { display: flex; flex-direction: column; gap: clamp(32px, 4vw, 48px); }
+
+/* Copy beside an image, the same pairing the About and Home sections use. */
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 520px; gap: clamp(28px, 6vw, 88px); align-items: center; }
+.introText { display: flex; flex-direction: column; gap: 20px; max-width: 560px; }
+
+.sectorsGrid { display: grid; grid-template-columns: minmax(0, 1fr) 560px; gap: clamp(28px, 6vw, 88px); align-items: center; }
+.sectorsText { display: flex; flex-direction: column; gap: 20px; max-width: 560px; }
+
+.stepsHead { display: grid; grid-template-columns: 480px minmax(0, 1fr); gap: clamp(24px, 6vw, 88px); align-items: center; }
+.stepsCopy { display: flex; flex-direction: column; gap: 16px; }
+.stepsPhoto { width: 480px; height: 380px; object-fit: cover; border-radius: var(--radius); }
+
+.benefit { display: grid; grid-template-columns: 460px minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
+.benefitLeft { display: flex; flex-direction: column; gap: 24px; }
+.benefitPhoto { width: 100%; height: 280px; object-fit: cover; border-radius: var(--radius); }
+.benefitRight { display: flex; flex-direction: column; gap: 24px; }
+
+@media (max-width: 900px) {
+  .intro, .sectorsGrid, .stepsHead, .benefit { grid-template-columns: 1fr; }
+  .introText, .sectorsText { max-width: none; }
+  .stepsPhoto { order: 2; width: 100%; height: 220px; }
+  .benefit { gap: 24px; }
+  .benefitPhoto { height: 200px; }
+}

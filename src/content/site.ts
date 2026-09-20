@@ -59,10 +59,10 @@ export const process = {
   extra: "The same four steps apply to every placement, from writing the job description through to day-to-day management, with structured daily reporting that keeps you informed of progress throughout.",
   stepsFlag: "Template filler", // steps describe research and academic work
   steps: [
-    { n: "01", title: "Job Description", text: "At Sawera Works, we specialize in delivering innovative and reliable solutions across research, teaching support, and project development." },
+    { n: "01", title: "Job Description", text: "At Savera Works, we specialize in delivering innovative and reliable solutions across research, teaching support, and project development." },
     { n: "02", title: "We Recruit", text: "We recruit passionate individuals with strong academic backgrounds and a commitment to excellence in research and education." },
     { n: "03", title: "Daily Reporting", text: "We follow a structured daily reporting system to ensure transparency and progress tracking." },
-    { n: "04", title: "We Manage", text: "Sawera Works effectively manages research projects, academic tasks, and professional services through strategic planning and organized execution." },
+    { n: "04", title: "We Manage", text: "Savera Works effectively manages research projects, academic tasks, and professional services through strategic planning and organized execution." },
   ],
 };
 

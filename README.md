@@ -45,4 +45,4 @@ The wording is unchanged and the original sentence is kept in `benefits.full`.
 - **Employer CTA.** "Start Hiring" goes to `/contact-us` (the live site sent employers to the resume form). Confirm with the client.
 - **Photography licence.** Unsplash images are free to use; attribution is appreciated, or replace with client photos of the same kind.
 - **Spam protection.** Add a honeypot or Turnstile to both forms before exposing the API routes publicly.
-# saweraworks
+# saveraworks

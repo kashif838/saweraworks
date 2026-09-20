@@ -25,7 +25,7 @@
 /* ---------- delivery experience ---------- */
 .expGrid { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: clamp(28px, 6vw, 72px); align-items: start; }
 .expList { display: flex; flex-direction: column; gap: 26px; max-width: 620px; }
-.exp { display: flex; flex-direction: column; gap: 8px; padding-left: 18px; border-left: 2px solid var(--blue); }
+.exp { display: flex; flex-direction: column; gap: 8px; padding: 24px 26px; border-radius: var(--radius); background: var(--surface); }
 .expPhoto { width: 440px; aspect-ratio: 3 / 2; height: auto; object-fit: cover; border-radius: var(--radius); }
 
 /* ---------- paired columns ---------- */
@@ -55,7 +55,7 @@
 @media (max-width: 900px) {
   .expGrid, .twoUp, .poc { grid-template-columns: 1fr; }
   .expPhoto { width: 100%; }
-  .expList { max-width: none; }
+  .expList { max-width: none; gap: 14px; }
   .poc { padding: 26px 24px; }
   .dataRow { grid-template-columns: 1fr; gap: 4px; }
 }

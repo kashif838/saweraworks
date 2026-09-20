@@ -189,17 +189,17 @@ export const governmentPage = {
 
   capabilitiesHeading: "Workforce capabilities",
   capabilities: [
-    { icon: "clipboard", title: "Administrative and Professional",
+    { icon: "clipboard", img: "/images/cap-admin.jpg", alt: "Records and document control", title: "Administrative and Professional",
       roles: "Administrative assistants, program analysts, project coordinators, records, customer service, call-center personnel, and document control." },
-    { icon: "chart", title: "Finance, Acquisition and HR",
+    { icon: "chart", img: "/images/cap-finance.jpg", alt: "Finance and payroll work", title: "Finance, Acquisition and HR",
       roles: "Accounting, billing, payroll, financial analysts, procurement/contract support, recruiting, HR operations, and training coordination." },
-    { icon: "monitor", title: "IT, Data and Technical",
+    { icon: "monitor", img: "/images/cap-it.jpg", alt: "IT and data support in a server room", title: "IT, Data and Technical",
       roles: "Help desk, desktop/application support, QA testers, data/business analysts, reporting, engineering technicians, and technical writers." },
-    { icon: "hardhat", title: "Manufacturing and Skilled Operations",
+    { icon: "hardhat", img: "/images/cap-manufacturing.jpg", alt: "Machine shop and skilled operations", title: "Manufacturing and Skilled Operations",
       roles: "Production, assembly, machine operators, mechanics, maintenance technicians, skilled trades, quality, and facilities support." },
-    { icon: "box", title: "Warehouse, Logistics and Supply",
+    { icon: "box", img: "/images/cap-logistics.jpg", alt: "Logistics and supply", title: "Warehouse, Logistics and Supply",
       roles: "Material handlers, forklift operators, inventory, shipping/receiving, production control, asset support, and logistics coordinators." },
-    { icon: "flask", title: "Laboratory, Field and Public Works",
+    { icon: "flask", img: "/images/cap-field.jpg", alt: "Municipal fleet and public works shop", title: "Laboratory, Field and Public Works",
       roles: "Laboratory technicians, field support, general labor, public works, fleet/mechanical, sanitation, and operational personnel." },
   ] as const,
 

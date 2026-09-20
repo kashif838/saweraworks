@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import Reveal, { CountUp } from "@/components/Reveal";
-import { Bullets, CtaSplit } from "@/components/Blocks";
+import { Bullets, CtaSplit, PhotoPair } from "@/components/Blocks";
 import { Box, Chart, Clipboard, Flask, HardHat, Mail, Monitor, Phone, Pin } from "@/components/Icons";
 import { governmentPage as c } from "@/content/site";
 import styles from "./page.module.css";
@@ -21,28 +21,38 @@ export default function GovernmentPage() {
 
       <section className="section">
         <div className={`wrap ${styles.stack}`}>
-          <Reveal className={styles.intro}>
-            <p className="p">{c.intro}</p>
-            <dl className={styles.stats}>
-              {c.stats.map(([n, label]) => (
-                <div key={n} className={styles.stat}>
-                  <dt className={styles.statNum}><CountUp value={n} /></dt>
-                  <dd className={`small ${styles.statLabel}`}>{label}</dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
+          {/* Copy beside a photo pair, the pairing used on Home, About and Services. */}
+          <div className={styles.introGrid}>
+            <Reveal className={styles.introText}>
+              <p className="p">{c.intro}</p>
+              <dl className={styles.stats}>
+                {c.stats.map(([n, label]) => (
+                  <div key={n} className={styles.stat}>
+                    <dt className={styles.statNum}><CountUp value={n} /></dt>
+                    <dd className={`small ${styles.statLabel}`}>{label}</dd>
+                  </div>
+                ))}
+              </dl>
+            </Reveal>
+            <PhotoPair
+              big="/images/gov-chamber.jpg" altBig="Council chamber before a session"
+              small="/images/gov-session.jpg" altSmall="Council members in session"
+            />
+          </div>
 
           <div className={styles.block}>
             <Reveal><h2 className="h2">{c.capabilitiesHeading}</h2></Reveal>
             <div className={styles.capGrid}>
-              {c.capabilities.map(({ icon, title, roles }, i) => {
+              {c.capabilities.map(({ icon, img, alt, title, roles }, i) => {
                 const Icon = ICONS[icon];
                 return (
                   <Reveal key={title} className={styles.cap} delay={(i % 3) * 0.08}>
-                    <span className={styles.capIcon}><Icon size={22} /></span>
-                    <h3 className="h4">{title}</h3>
-                    <p className={styles.capRoles}>{roles}</p>
+                    <Image src={img} alt={alt} width={400} height={267} className={styles.capPhoto} sizes="(max-width: 620px) 100vw, (max-width: 1000px) 50vw, 33vw" />
+                    <div className={styles.capBody}>
+                      <span className={styles.capIcon}><Icon size={20} /></span>
+                      <h3 className="h4">{title}</h3>
+                      <p className={styles.capRoles}>{roles}</p>
+                    </div>
                   </Reveal>
                 );
               })}
@@ -60,25 +70,41 @@ export default function GovernmentPage() {
                   </div>
                 ))}
               </Reveal>
-              <Image src="/images/public-works.jpg" alt="Public works crew on site" width={440} height={294} className={styles.expPhoto} sizes="(max-width: 900px) 100vw, 440px" />
+              <PhotoPair
+                big="/images/public-works.jpg" altBig="Public works crew on site"
+                small="/images/fleet-mechanic.jpg" altSmall="Fleet mechanic at work"
+              />
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* Full-width statement band, built like the CTA panels: photo under a dark scrim. */}
+      <section className="section">
+        <div className="wrap">
+          <Reveal className={styles.band}>
+            <Image src="/images/gov-delivery.jpg" alt="" fill sizes="100vw" className={styles.bandBg} />
+            <div className={styles.bandScrim} />
+            <div className={styles.bandBody}>
+              <h2 className={`h2 ${styles.bandTitle}`}>{c.deliveryHeading}</h2>
+              <p className={styles.bandText}>{c.delivery}</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className={`wrap ${styles.stack}`}>
           <div className={styles.twoUp}>
-            <Reveal className={styles.col}>
+            <Reveal className={`card ${styles.panel}`}>
               <h2 className={`h2 ${styles.h2Sm}`}>{c.useHeading}</h2>
               <Bullets items={c.use} cols={1} />
             </Reveal>
-            <Reveal className={styles.col} delay={0.12}>
+            <Reveal className={`card ${styles.panel}`} delay={0.12}>
               <h2 className={`h2 ${styles.h2Sm}`}>{c.engagementHeading}</h2>
               <Bullets items={c.engagement} cols={1} />
             </Reveal>
           </div>
-
-          <Reveal className={styles.delivery}>
-            <h2 className="h2">{c.deliveryHeading}</h2>
-            <p className="p">{c.delivery}</p>
-          </Reveal>
 
           <div className={styles.block}>
             <Reveal><h2 className="h2">{c.valueHeading}</h2></Reveal>
@@ -86,7 +112,7 @@ export default function GovernmentPage() {
           </div>
 
           <div className={styles.twoUp}>
-            <Reveal className={styles.col}>
+            <Reveal className={`card ${styles.panel}`}>
               <h2 className={`h2 ${styles.h2Sm}`}>{c.dataHeading}</h2>
               <dl className={styles.data}>
                 {c.data.map(([k, v]) => (
@@ -97,7 +123,7 @@ export default function GovernmentPage() {
                 ))}
               </dl>
             </Reveal>
-            <Reveal className={styles.col} delay={0.12}>
+            <Reveal className={`card ${styles.panel}`} delay={0.12}>
               <h2 className={`h2 ${styles.h2Sm}`}>{c.naicsHeading}</h2>
               <dl className={styles.data}>
                 {c.naics.map(([code, label]) => (

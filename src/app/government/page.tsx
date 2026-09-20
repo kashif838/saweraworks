@@ -63,12 +63,7 @@ export default function GovernmentPage() {
             <Reveal><h2 className="h2">{c.experienceHeading}</h2></Reveal>
             <div className={styles.expGrid}>
               <Reveal className={styles.expList}>
-                {c.experience.map(({ client, text }) => (
-                  <div key={client} className={styles.exp}>
-                    <h3 className="h4">{client}</h3>
-                    <p className="p">{text}</p>
-                  </div>
-                ))}
+                <Bullets items={c.experience} cols={1} />
               </Reveal>
               <PhotoPair
                 big="/images/public-works.jpg" altBig="Public works crew on site"

@@ -78,7 +78,7 @@ export const process = {
     { n: "07", title: "Pre-employment vetting", text: "Complete required background, drug, driving-record, credential, education, employment, and other position-specific checks." , img: "/images/step-vetting.jpg", alt: "Pre-employment paperwork" },
     { n: "08", title: "Onboarding and deployment", text: "Complete employment documentation, payroll setup, assignment orientation, and reporting instructions." , img: "/images/agreement.jpg", alt: "Onboarding agreement" },
     { n: "09", title: "Ongoing management", text: "Confirm first-day start, maintain communication with the employee and hiring manager, and address performance or attendance issues promptly." , img: "/images/team.jpg", alt: "Savera Works team at work" },
-    { n: "10", title: "Replacement and continuity", text: "Rapidly source acceptable replacement personnel when an assignment ends unexpectedly or the City requests a change." , img: "/images/step-continuity.jpg", alt: "Colleagues handing over an assignment" },
+    { n: "10", title: "Replacement and continuity", text: "Rapidly source acceptable replacement personnel when an assignment ends unexpectedly or the client requests a change." , img: "/images/step-continuity.jpg", alt: "Colleagues handing over an assignment" },
   ],
   screeningHeading: "Screening, Credentialing, and Compliance",
   screeningText: "Savera Works maintains a position-specific screening process: criminal-history screening, Social Security trace/identity verification, sex-offender registry screening, employment and education verification, at least three professional reference checks for every candidate, and additional checks — driving records, credit history, drug testing, fingerprinting, polygraph examination, psychological evaluation, licenses, registrations, and certifications — when required by the position or client.",
@@ -115,12 +115,12 @@ export const aboutPage = {
     ["Established", "June 2011"],
     ["Headquarters", "McLean, VA"],
     ["Ownership", "Female minority-owned"],
-    ["Focus", "Government and education sectors"],
+    ["Focus", "Government, Commercial, Non for Profit and Education"],
   ],
 
   // Second section. p3a/p3b are the single source paragraph split for layout; no new claims.
   growthHeading: "Growth, and the team behind it",
-  p3a: "Over the past five years, Savera Works has experienced a remarkable growth of 2220%, demonstrating our financial stability and strong market presence. This growth is a testament to our ability to effectively scale operations and adapt to a dynamic market.",
+  p3a: "Savera Works has experienced a remarkable growth of 2220%, demonstrating our financial stability and strong market presence. This growth is a testament to our ability to effectively scale operations and adapt to a dynamic market.",
   p3b: "Our team, composed of seasoned professionals from Fortune 500 staffing companies, brings a rich blend of industry best practices and extensive knowledge, enhancing our service delivery.",
   p3Flag: "Split for layout", // one source paragraph, shown as two
   stats: [
@@ -130,7 +130,7 @@ export const aboutPage = {
   ],
 
   valueHeading: "Our value",
-  valueText: "Meanwhile, contractors appreciate our reliable and consistent payment schedule, as we ensure they are paid weekly, fostering a sense of security and respect. This regular payment schedule helps contractors feel more integrated and valued within the organizations they serve, not as temporary fill-ins but as essential contributors to the team.",
+  valueText: "Contractors appreciate our reliable and consistent payment schedule, as we ensure they are paid weekly, fostering a sense of security and respect. This regular payment schedule helps contractors feel more integrated and valued within the organizations they serve, not as temporary fill-ins but as essential contributors to the team.",
   values: [
     ["Strong Relationship Building", "We stay close to both sides of a placement, so clients and contractors deal with people who already know the role."],
     ["Trusted Human Capital Partner", "Twelve years of government and education staffing, handled by professionals from Fortune 500 staffing companies."],
@@ -183,7 +183,7 @@ export const governmentPage = {
   intro: "Savera Works fills critical workforce gaps quickly while handling recruiting, screening, onboarding, payroll, and employee administration for you. From one specialist to multiple shifts or project teams of up to 80 personnel, Savera provides one accountable team from recruitment through assignment completion.",
   stats: [
     ["24–48 hours", "Response on standard staffing requirements"],
-    ["80 personnel", "Scale of a single deployment"],
+    ["80+ personnel", "Scale of a single deployment"],
     ["50 states", "Nationwide service area"],
   ],
 
@@ -204,13 +204,13 @@ export const governmentPage = {
   ] as const,
 
   experienceHeading: "Relevant delivery experience",
+  // Client names withheld at the client's request; the work itself is from the PDF.
   experience: [
-    { client: "Fairfax County",
-      text: "Multidisciplinary staffing for mechanics, engineers, laboratory technicians, IT, analysts, call-center, administrative, procurement, professional, and operational personnel; approximately 25–28 workers at one facility and 40–60 seasonal personnel." },
-    { client: "City of Alexandria",
-      text: "Incumbent workforce support for public works and labor-intensive operations, including recruiting, onboarding, payroll, timekeeping, invoicing, reporting, issue resolution, and account management." },
-  ] as const,
-
+    "Multidisciplinary staffing for mechanics, engineers, laboratory technicians, IT, analysts, call-center, administrative, procurement, professional, and operational personnel.",
+    "Approximately 25–28 workers at a single facility, plus 40–60 seasonal personnel.",
+    "Incumbent workforce support for public works and labor-intensive operations.",
+    "Recruiting, onboarding, payroll, timekeeping, invoicing, reporting, issue resolution, and account management.",
+  ],
   useHeading: "How organizations can use Savera",
   use: [
     "Temporary, contract, direct-hire, workforce augmentation, and payroll-only solutions.",

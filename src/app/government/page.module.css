@@ -33,7 +33,6 @@
 /* ---------- delivery experience ---------- */
 .expGrid { display: grid; grid-template-columns: minmax(0, 1fr) 520px; gap: clamp(28px, 6vw, 72px); align-items: center; }
 .expList { display: flex; flex-direction: column; gap: 16px; max-width: 560px; }
-.exp { display: flex; flex-direction: column; gap: 8px; padding: 24px 26px; border-radius: var(--radius); background: var(--surface); }
 
 /* ---------- delivery model band ---------- */
 .band {

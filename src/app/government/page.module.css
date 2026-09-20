@@ -52,8 +52,24 @@
 .bandText { font-size: 17px; line-height: 1.6; color: rgba(255, 255, 255, 0.88); margin: 0; }
 
 /* ---------- panels ---------- */
-.twoUp { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.twoUp { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
 .panel { padding: 36px 38px; display: flex; flex-direction: column; gap: 20px; }
+
+/* Photo panels, built like the delivery band and the CTA cards. */
+.panelDark {
+  position: relative; isolation: isolate; overflow: hidden;
+  border-radius: var(--radius); background: var(--ink);
+  padding: 40px 38px;
+}
+.panelBg { object-fit: cover; z-index: -2; }
+.panelScrim {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(170deg, rgba(10, 10, 12, 0.8) 0%, rgba(10, 10, 12, 0.86) 100%);
+}
+.panelBody { display: flex; flex-direction: column; gap: 20px; }
+.onDark { color: #fff; }
+/* The shared Bullets component paints body text; on a photo it reads light. */
+.panelDark ul li, .poc ul li { color: rgba(255, 255, 255, 0.9); }
 
 /* ---------- company data ---------- */
 .data { display: flex; flex-direction: column; gap: 14px; margin: 0; }
@@ -64,12 +80,20 @@
 .code { font-size: 15px; font-weight: 600; color: var(--blue-text); letter-spacing: 0.02em; }
 
 /* ---------- point of contact ---------- */
-.poc { padding: 40px 44px; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: clamp(24px, 4vw, 56px); align-items: center; }
+.poc {
+  position: relative; isolation: isolate; overflow: hidden;
+  border-radius: var(--radius); background: var(--ink);
+  padding: 44px 44px; display: grid; grid-template-columns: minmax(0, 1fr) 380px;
+  gap: clamp(24px, 4vw, 56px); align-items: center;
+}
 .pocText { display: flex; flex-direction: column; gap: 10px; }
-.pocName { font-size: 19px; font-weight: 600; color: var(--ink); margin: 0; }
+.pocName { font-size: 19px; font-weight: 600; color: #fff; margin: 0; }
+.pocName span { color: rgba(255, 255, 255, 0.72); }
 .pocRows { display: flex; flex-direction: column; gap: 12px; }
-.row { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: var(--ink); }
+.poc .row { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: rgba(255, 255, 255, 0.92); }
+.pocRows a:hover { color: #fff; }
 .icon { color: var(--blue); flex-shrink: 0; }
+.pocRows .row svg { color: var(--blue); }
 
 @media (max-width: 1000px) {
   .capGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -77,8 +101,8 @@
 @media (max-width: 900px) {
   .introGrid, .expGrid, .twoUp, .poc { grid-template-columns: 1fr; }
   .introText, .expList { max-width: none; }
-  .panel { padding: 26px 24px; }
-  .poc { padding: 26px 24px; }
+  .panel, .panelDark { padding: 28px 24px; }
+  .poc { padding: 28px 24px; }
   .dataRow { grid-template-columns: 1fr; gap: 4px; }
   .band { min-height: 0; }
 }

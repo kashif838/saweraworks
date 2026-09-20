@@ -96,13 +96,21 @@ export default function GovernmentPage() {
       <section className="section">
         <div className={`wrap ${styles.stack}`}>
           <div className={styles.twoUp}>
-            <Reveal className={`card ${styles.panel}`}>
-              <h2 className={`h2 ${styles.h2Sm}`}>{c.useHeading}</h2>
-              <Bullets items={c.use} cols={1} />
+            <Reveal className={styles.panelDark}>
+              <Image src="/images/panel-use.jpg" alt="" fill sizes="(max-width: 900px) 100vw, 50vw" className={styles.panelBg} />
+              <div className={styles.panelScrim} />
+              <div className={styles.panelBody}>
+                <h2 className={`h2 ${styles.h2Sm} ${styles.onDark}`}>{c.useHeading}</h2>
+                <Bullets items={c.use} cols={1} />
+              </div>
             </Reveal>
-            <Reveal className={`card ${styles.panel}`} delay={0.12}>
-              <h2 className={`h2 ${styles.h2Sm}`}>{c.engagementHeading}</h2>
-              <Bullets items={c.engagement} cols={1} />
+            <Reveal className={styles.panelDark} delay={0.12}>
+              <Image src="/images/panel-engagement.jpg" alt="" fill sizes="(max-width: 900px) 100vw, 50vw" className={styles.panelBg} />
+              <div className={styles.panelScrim} />
+              <div className={styles.panelBody}>
+                <h2 className={`h2 ${styles.h2Sm} ${styles.onDark}`}>{c.engagementHeading}</h2>
+                <Bullets items={c.engagement} cols={1} />
+              </div>
             </Reveal>
           </div>
 
@@ -136,9 +144,11 @@ export default function GovernmentPage() {
             </Reveal>
           </div>
 
-          <Reveal className={`card ${styles.poc}`}>
+          <Reveal className={styles.poc}>
+            <Image src="/images/panel-contact.jpg" alt="" fill sizes="100vw" className={styles.panelBg} />
+            <div className={styles.panelScrim} />
             <div className={styles.pocText}>
-              <h2 className={`h2 ${styles.h2Sm}`}>{c.contactHeading}</h2>
+              <h2 className={`h2 ${styles.h2Sm} ${styles.onDark}`}>{c.contactHeading}</h2>
               <p className={styles.pocName}>{c.poc.name}<span className="small">, {c.poc.role}</span></p>
             </div>
             <div className={styles.pocRows}>

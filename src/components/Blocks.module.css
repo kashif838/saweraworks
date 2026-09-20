@@ -1,8 +1,7 @@
 /* ---------- bullets ---------- */
 .bullets { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 40px; }
 .bulletsOne { grid-template-columns: 1fr; }
-.bulletsPlain li { font-weight: 400; color: var(--text); }
-.bullets li { display: flex; gap: 12px; align-items: baseline; font-size: 17px; line-height: 1.45; color: var(--ink); font-weight: 500; letter-spacing: -0.01em; }
+.bullets li { display: flex; gap: 12px; align-items: baseline; font-size: 17px; line-height: 1.45; color: var(--text); font-weight: 400; letter-spacing: -0.01em; }
 .bulletDot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; position: relative; top: -3px; }
 @media (max-width: 900px) { .bullets { grid-template-columns: 1fr; gap: 12px; } .bullets li { font-size: 16px; } }
 

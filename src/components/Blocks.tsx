@@ -14,10 +14,10 @@ export function PhoneLink({ display = contact.phoneDisplay }: { display?: string
 }
 
 /** Plain bulleted list, two columns on desktop. */
-export function Bullets({ items, cols = 2, plain = false }: { items: readonly string[]; cols?: 1 | 2; plain?: boolean }) {
+export function Bullets({ items, cols = 2 }: { items: readonly string[]; cols?: 1 | 2 }) {
   const { group, item } = useStaggerProps(revealUp, revealStaggerList);
   return (
-    <motion.ul className={`${styles.bullets} ${cols === 1 ? styles.bulletsOne : ""} ${plain ? styles.bulletsPlain : ""}`} {...group}>
+    <motion.ul className={`${styles.bullets} ${cols === 1 ? styles.bulletsOne : ""}`} {...group}>
       {items.map((i) => (
         <motion.li key={i} {...item}><span className={styles.bulletDot} /><span>{i}</span></motion.li>
       ))}

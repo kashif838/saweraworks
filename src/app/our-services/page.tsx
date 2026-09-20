@@ -60,7 +60,7 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal className={styles.benefitRight} delay={0.2}>
               <p className="p">{benefits.text}</p>
-              <Bullets items={benefits.items} cols={1} plain />
+              <Bullets items={benefits.items} cols={1} />
             </Reveal>
           </div>
         </div>

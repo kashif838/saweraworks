@@ -17,7 +17,7 @@ const ICONS = { clipboard: Clipboard, chart: Chart, monitor: Monitor, hardhat: H
 export default function GovernmentPage() {
   return (
     <>
-      <Hero image="/images/hero-government.jpg" title={c.title} crumb={c.crumb} text={c.lead} position="center 35%" />
+      <Hero image="/images/hero-government.jpg" alt="The United States Capitol" title={c.title} crumb={c.crumb} text={c.lead} position="center 42%" />
 
       <section className="section">
         <div className={`wrap ${styles.stack}`}>
